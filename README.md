@@ -16,8 +16,8 @@ REQUISITOS PREVIOS:
 
 1. Desconecte el lector de huellas del puerto USB.
 2. Entre a la carpeta "1_Drivers".
-3. Descomprima el archivo y ejecute el instalador (Setup.exe).
-   Instale el programa con las opciones por defecto (Siguiente > Siguiente).
+3. Entra a la Url del Driver y descargalo.
+   Instale el primer driver en la carpeta RTE y el segundo en el SDK las opciones por defecto (Siguiente > Siguiente).
 4. Reinicie la computadora.
 5. Conecte el lector de huellas al puerto USB (Debe encender una luz y apagarse).
 
@@ -25,11 +25,11 @@ REQUISITOS PREVIOS:
 
 ## PASO 2: INSTALAR EL AGENTE DE CLÍNICA SOLUTION
 
-1. En esta carpeta principal, busque el archivo llamado "Instalar_Agente.bat".
-2. Haga DOBLE CLIC sobre él.
+1. En esta carpeta principal, busque la carpeta llamada "ClinicaAgentes.rar" y descomprime .
+2. Haga DOBLE CLIC sobre él archivo llamado instalar.bat.
 3. Se abrirá una pantalla negra instalando los archivos. Presione cualquier tecla cuando diga "INSTALACIÓN COMPLETADA".
 
-¡LISTO!
+¡LISTO!`
 El software ya está instalado y funcionando de forma invisible. A partir de ahora, cada vez que encienda la computadora, el Agente arrancará solo. Ya puede abrir su navegador y utilizar el sistema web de Clínica Solution con normalidad.
 
 - NOTA TÉCNICA: El agente funciona en el puerto localhost:12412 y localhost:12413. Asegúrese de que su antivirus no bloquee estos puertos internos.
@@ -40,5 +40,4 @@ El software ya está instalado y funcionando de forma invisible. A partir de aho
 ┣ 📂 2_Software
 ┃ ┗ 📂 ClinicaAgentes
 ┃ ┗ 📜 AgenteBiometrico.exe (Y todos los .dll de la carpeta Release)
-┣ 📜 Instalar_Agente.bat (Nuestro instalador mágico)
 ┗ 📜 LEEME_Instrucciones.txt
