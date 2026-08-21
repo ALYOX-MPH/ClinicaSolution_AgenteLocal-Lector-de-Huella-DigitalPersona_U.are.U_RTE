@@ -29,6 +29,61 @@ REQUISITOS PREVIOS:
 2. Haga DOBLE CLIC sobre él archivo llamado instalar.bat.
 3. Se abrirá una pantalla negra instalando los archivos. Presione cualquier tecla cuando diga "INSTALACIÓN COMPLETADA".
 
+## Fase 3: Configuración del Arranque Automático (Programador de Tareas)
+
+Para que el agente arranque silenciosamente con la PC y tenga permisos sobre los puertos USB sin requerir contraseñas, configuraremos una tarea programada.
+
+Presiona las teclas Windows + R, escribe taskschd.msc y presiona Enter.
+
+En el panel lateral derecho, haz clic en Crear tarea... (No elijas "Crear tarea básica").
+
+Configura las siguientes pestañas exactamente como se indica:
+
+Pestaña: General
+
+Nombre: Agente Biometrico Clinica Solution
+
+Selecciona: Ejecutar solo cuando el usuario haya iniciado sesión.
+
+Marca la casilla: Ejecutar con los privilegios más altos.
+
+Pestaña: Desencadenadores (Triggers)
+
+Haz clic en Nuevo...
+
+En "Iniciar la tarea", selecciona: Al iniciar sesión.
+
+Verifica que la casilla "Habilitado" esté marcada y haz clic en Aceptar.
+
+Pestaña: Acciones (Actions)
+
+Haz clic en Nueva...
+
+Acción: Iniciar un programa.
+
+En Programa/script, haz clic en Examinar y selecciona: C:\ClinicaAgentes\AgenteBiometrico.exe.
+
+Haz clic en Aceptar.
+
+Pestaña: Condiciones (Conditions)
+
+¡Importante! Desmarca la casilla: Iniciar la tarea solo si el equipo está conectado a la corriente alterna (Vital si la clínica usa Laptops o UPS).
+
+Haz clic en Aceptar para guardar la tarea.
+
+Fase 4: Pruebas y Monitoreo
+Reinicia la computadora.
+
+Al ingresar al escritorio de Windows, la tarea lanzará el Agente en segundo plano (es posible que veas una consola negra aparecer y desaparecer en un segundo).
+
+Conecta el lector de huellas DigitalPersona.
+
+Para confirmar que todo funciona correctamente, abre el archivo C:\ClinicaAgentes\agente_log.txt. Deberías ver un mensaje similar a:
+
+ÉXITO: Lector conectado y abierto correctamente.
+
+Ingresa al sistema web de Clínica Solution y realiza una captura de prueba.
+
 ¡LISTO!`
 El software ya está instalado y funcionando de forma invisible. A partir de ahora, cada vez que encienda la computadora, el Agente arrancará solo. Ya puede abrir su navegador y utilizar el sistema web de Clínica Solution con normalidad.
 
